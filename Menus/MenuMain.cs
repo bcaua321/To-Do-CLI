@@ -59,6 +59,9 @@ namespace ToDo.Menus
             Console.Beep();
           }
           break;
+        case 3:
+          Task.DeleteItem.DeleteElement();
+          break;
         case 4:
           Task.Item.ListElements();
           break;

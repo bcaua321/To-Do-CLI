@@ -6,6 +6,11 @@ namespace ToDo.Task
   {
     public static void DeleteElement()
     {
+      if (Item.ListIsEmpty())
+      {
+        Console.WriteLine("Lista Vazia!");
+        return;
+      }
       string id;
 
       ListElements();
@@ -18,6 +23,11 @@ namespace ToDo.Task
         throw new NullStringException("Não é possivel deletar!");
       }
 
+      if (int.Parse(id) < 0 || int.Parse(id) > itens.Count())
+      {
+        Console.WriteLine("Insira um número válido!");
+        return;
+      }
       RemoveTask(int.Parse(id));
     }
   }
