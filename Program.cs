@@ -1,12 +1,10 @@
 ﻿using System;
-using ToDo.Item;
-
+using ToDo.Task;
+using ToDo.Menus;
 public class Program
 {
   public static void Main(string[] args)
   {
-    Item.addTask("asddasds");
-    Item.listElements();
-
+    MenuMain.OptionsMenuView();
   }
 }
